@@ -1,15 +1,15 @@
 <!doctype html>
 <html>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <title>Effective QA</title>
-  <link rel="icon" href="./tailwind-images/logo.png" type="image/x-icon">
-  <style>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Effective QA</title>
+    <link rel="icon" href="./tailwind-images/logo.png" type="image/x-icon">
+    <style>
     html{scroll-behavior: smooth;}
     @keyframes marquee {
       0% {
@@ -23,374 +23,602 @@
       animation: marquee 20s linear infinite;
     }
   </style>
-</head>
+  </head>
 
-<body class="bg-white overflow-x-hidden">
+  <body class="bg-white overflow-x-hidden">
 
-  <!-- v0.4 -->
-  <!-- 13 May 2024 -->
+    <!-- v0.4 -->
+    <!-- 13 May 2024 -->
 
-  <!-- HERO -->
-  <div class="max-w-full h-auto p-0 m-0 overflow-hidden">
-  <header class="bg-white shadow-sm">
-    <nav data-aos="fade-down" id="navbar" class="bg-white mb-12 fixed top-0 shadow-md w-full z-50 py-4 flex justify-between
+    <!-- HERO -->
+    <div class="max-w-full h-auto p-0 m-0 overflow-hidden">
+      <header class="bg-white shadow-sm">
+        <nav data-aos="fade-down" id="navbar"
+          class="bg-white mb-12 fixed top-0 shadow-md w-full z-50 py-4 flex justify-between
    items-center">
-      <a href="#" class="lg:absolute text-2xl font-bold text-gray-800">
-        <img class="h-8 w-auto ml-[20px]"
-          src="https://cdn.shopify.com/s/files/1/0780/2493/3664/files/EffectiveQA_logo_black.png?v=1717770545"
-          alt="EffectiveQA black logo">
-      </a>
-      <div class="hidden lg:flex lg:space-x-8 lg:flex-1 lg:justify-end w-full mr-[20px]">
-        <a href="#Benefits" class="text-gray-800 hover:text-gray-600 my-3">Benefits</a>
-        <a href="#Pricing" class="text-gray-800  hover:text-gray-600 my-3">Pricing</a>
-        <a href="blog.html" class="text-gray-800  hover:text-gray-600 my-3">Blog</a>
-        <a href="#contact" class="text-white rounded-md px-3.5 py-3.5 text-sm font-semibold text-white 
-                  shadow-sm bg-[#f1580c] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">Contact us</a>
-        <!-- <a href="#" class="text-gray-800 hover:text-gray-600 my-3">Services</a> -->
-      </div>
-      <!-- <div class="hidden lg:flex"> -->
-        <a href="#" class="bg-[#f1580c] text-white px-4 hidden py-2 rounded-md mr-[10px] hover:bg-[#f56d2b]">Pricing</a>
-        <a href="#" class="bg-[#f1580c] text-white px-4 hidden py-2 rounded-md mr-[10px] hover:bg-[#f56d2b]">Pricing</a>
-        <a href="#" class="bg-[#f1580c] text-white px-4 hidden py-2 rounded-md mr-[10px] hover:bg-[#f56d2b]">Pricing</a>
-        <a href="#" class="block bg-[#f1580c] text-white hidden mr-[28px] rounded-md px-4 py-2">Contact Us</a>
-      <!-- </div> -->
-      <div class="lg:hidden flex item-center">
-        <button id="mobile-menu-button" type="button" class="text-gray-700 mr-4">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-    </nav>
-    <div id="mobile-menu" class="lg:hidden mb-0 hidden fixed top-0 left-0 right-0 w-[150vw] h-full bg-white z-10">
-      <nav class="space-y-4 px-4 py-20 h-screen bg-white">
-        <a href="#Benefits" class="block text-gray-800 hover:bg-gray-100 rounded-md px-4 py-2">Benefits</a>
-        <a href="#Pricing" class="block text-gray-800 hover:bg-gray-100 rounded-md px-4 py-2">Pricing</a>
-        <a href="#contact" class="block text-gray-800 hover:bg-gray-100 rounded-md px-4 py-2">Contact us</a>
-        <!-- <a href="#" class="block text-gray-800 hover:bg-gray-100 rounded-md px-4 py-2">Services</a> -->
-        <!-- <a href="#" class="block bg-[#f1580c] text-white hover:bg-[#f56d2b] rounded-md w-36 px-4 py-2">Pricing</a> -->
-        <!-- <a href="#" class="block text-white bg-[#f1580c] rounded-md px-4 w-36 py-2">Get in touch</a> -->
-      </nav>
-    </div>
-  </header>
-<!-- hero section -->
-  <section  class="relative flex mx-0 xl:w-[100%] lg:w-[100%] md:w-[100%] w-auto items-center justify-center min-h-screen">
-    <img src="tailwind-images/QA-solutions-one-fixed-price.svg" alt="Fixed Monthly Software QA Solutions" class="opacity-100 absolute top-0 right-0 left-0 lg:w-screen xl:w-screen md:w-screen w-full fixed  h-full
-     object-cover ">
-
-    <!-- <div class=" relative xl:pt-[120px] xl:pb-[52px] lg:pt-[120px] lg:pb-[50px] sm:pt-[80px] pt-[60px] pb-[60px]"> -->
-      <div class="lg:mr-auto lg:px-12 lg:mx-0 mx-6 lg:py-10 py-5 px-6 sm:py-9 sm:px-10 lg:w-[800px] w-[400px] relative lg:h-auto h-[650px] mt-[75px] rounded-xl lg:rounded-[20px]
-       lg:mx-8  
-      ">
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Simple, Effective Software QA Solutions for Your Business
-        </h2>
-        <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-2xl py-6">Flawless performance - one fixed price</h2>
-        <p class="mt-2 text-lg leading-8 text-gray-600">
-          Is malfunctioning software damaging your reputation and causing customer churn? <b>Effective QA</b> offers the benefits of software quality assurance by delivering comprehensive software QA as a service. 
-          Our two decades of software development ensure a high level of expertise. Our fixed monthly package offers consistent service without any billing surprises. 
-        </p>
-        <div class="mt-10 flex justify-start">
-          <a href="#contact" class="text-white rounded-md px-3.5 py-2.5 text-sm font-semibold text-white 
-                  shadow-sm bg-[#f1580c] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">Contact us</a>
+          <a href="#" class="lg:absolute text-2xl font-bold text-gray-800">
+            <img class="h-8 w-auto ml-[20px]"
+              src="https://cdn.shopify.com/s/files/1/0780/2493/3664/files/EffectiveQA_logo_black.png?v=1717770545"
+              alt="EffectiveQA black logo">
+          </a>
+          <div
+            class="hidden lg:flex lg:space-x-8 lg:flex-1 lg:justify-end w-full mr-[20px]">
+            <a href="#Benefits"
+              class="text-gray-800 hover:text-gray-600 my-3">Benefits</a>
+            <a href="#Pricing"
+              class="text-gray-800  hover:text-gray-600 my-3">Pricing</a>
+            <a href="blog.html"
+              class="text-gray-800  hover:text-gray-600 my-3">Blog</a>
+            <a href="#contact"
+              class="text-white rounded-md px-3.5 py-3.5 text-sm font-semibold text-white 
+                  shadow-sm bg-[#f1580c] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">Contact
+              us</a>
+            <!-- <a href="#" class="text-gray-800 hover:text-gray-600 my-3">Services</a> -->
+          </div>
+          <!-- <div class="hidden lg:flex"> -->
+          <a href="#"
+            class="bg-[#f1580c] text-white px-4 hidden py-2 rounded-md mr-[10px] hover:bg-[#f56d2b]">Pricing</a>
+          <a href="#"
+            class="bg-[#f1580c] text-white px-4 hidden py-2 rounded-md mr-[10px] hover:bg-[#f56d2b]">Pricing</a>
+          <a href="#"
+            class="bg-[#f1580c] text-white px-4 hidden py-2 rounded-md mr-[10px] hover:bg-[#f56d2b]">Pricing</a>
+          <a href="#"
+            class="block bg-[#f1580c] text-white hidden mr-[28px] rounded-md px-4 py-2">Contact
+            Us</a>
+          <!-- </div> -->
+          <div class="lg:hidden flex item-center">
+            <button id="mobile-menu-button" type="button"
+              class="text-gray-700 mr-4">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </nav>
+        <div id="mobile-menu"
+          class="lg:hidden mb-0 hidden fixed top-0 left-0 right-0 w-[150vw] h-full bg-white z-10">
+          <nav class="space-y-4 px-4 py-20 h-screen bg-white">
+            <a href="#Benefits"
+              class="block text-gray-800 hover:bg-gray-100 rounded-md px-4 py-2">Benefits</a>
+            <a href="#Pricing"
+              class="block text-gray-800 hover:bg-gray-100 rounded-md px-4 py-2">Pricing</a>
+            <a href="blog.html"
+              class="block text-gray-800 hover:bg-gray-100 rounded-md px-4 py-2">Blog</a>
+            <a href="#contact"
+              class="block text-gray-800 hover:bg-gray-100 rounded-md px-4 py-2">Contact us</a>
+            <!-- <a href="#" class="block text-gray-800 hover:bg-gray-100 rounded-md px-4 py-2">Services</a> -->
+            <!-- <a href="#" class="block bg-[#f1580c] text-white hover:bg-[#f56d2b] rounded-md w-36 px-4 py-2">Pricing</a> -->
+            <!-- <a href="#" class="block text-white bg-[#f1580c] rounded-md px-4 w-36 py-2">Get in touch</a> -->
+          </nav>
         </div>
-      </div>
-
-    <!-- </div> -->
-  </section>
-  <!-- FEATURES -->
-  <div  id="Benefits">
+      </header>
+      <!-- hero section -->
+      
+      <section class="mt-[100px] mx-12 h-auto relative sm:mt-0 sm:mr-0 xl:h-auto 2xl:h-screen">
     
-    <div class="mx-6 xl:w-[95%] lg:w-[100%] md:w-[100%] w-auto overflow-hidden  px-6 lg:px-8 mt-8 sm:mt-20">
-      <div class="lg:text-center">
-        <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">The Benefits of Our Software Quality Assurance Service
-        </p>
+    <div class="flex flex-col sm:h-auto mb-6 xl:justify-center xl:h-auto xl:mb-32 xl:mt-12 2xl:mt-0 2xl:h-screen">
+      <div class="py-2 sm:w-[280px] sm:mt-[110px] md:w-[350px] lg:w-[450px] xl:w-[500px] xl:mt-32 2xl:mt-0">
+        <h2 class="text-3xl sm:text-4xl py-1 sm:py-6 font-bold tracking-normal text-gray-900">Simple, Effective Software QA Solutions for Your Business
+        </h2>
+        <h2 class="text-2xl font-medium tracking-normal text-[#F3702F]">Flawless performance - one fixed price</h2>
       </div>
-      <div class="mt-8 sm:mt-20 lg:mt-20 w-auto">
-        <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-          <div data-aos="fade-right" class="relative pl-24">
-            <dt class="text-base font-semibold leading-7 text-gray-900">
-              <div class="absolute left-0 top-0 flex h-24 w-24 justify-start rounded-lg">
-                <img class="lg:mt-0" src="tailwind-images/reduced-costs.svg" alt="Our software QA solutions reduce costs">
-              </div>
-              Reduced Costs
-            </dt>
-            <dd class="mt-2 text-justify leading-7 text-gray-600">We identify issues early before they develop into time and money-consuming problems. 
-              We reduce costs on product recalls and updates and save your company's reputation.</dd>
+      <p class="pb-8 text-gray-500 text-md sm:pb-0 sm:pt-[20px] sm:leading-6 md:w-[65%] lg:w-[40%]">
+        Is malfunctioning software damaging your reputation and causing customer churn? <b>Effective QA</b> offers the benefits of software quality assurance by delivering comprehensive software QA as a service. 
+        Our two decades of software development ensure a high level of expertise. Our fixed monthly package offers consistent service without any billing surprises. 
+      </p>
+      <div class="h-auto flex justify-start sm:py-8">
+        <a href="#contact" class="text-white rounded-md px-3.5 py-2.5 h-fit w-nowrap text-sm font-semibold text-white 
+                shadow-sm bg-[#f1580c] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">Contact us</a>
+      </div>
+      
+    </div>
+    <img
+      src="tailwind-images/QA-solutions-one-fixed-price.svg"
+      alt="Fixed Monthly Software QA Solutions"
+      class="hidden sm:opacity-100 sm:block sm:absolute sm:top-0 sm:right-0 sm:w-[70%] xl:w-[65%] 2xl:w-[75%]" 
+    />
+    
+    
+  </section>
+      <!-- FEATURES -->
+      <div id="Benefits">
+
+        <div
+          class="mx-6 w-auto overflow-hidden px-6 lg:px-8 mt-8">
+          <div class="lg:text-center">
+            <p
+              class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">The
+              Benefits of Our Software Quality Assurance Service
+            </p>
           </div>
-          <div data-aos="fade-left" class="relative pl-24">
-            <dt class="text-base font-semibold leading-7 text-gray-900">
+          <div class="mt-8 sm:mt-16 lg:mt-16 w-auto">
+            <dl class="grid grid-cols-1 gap-x-6 gap-y-6 md:grid-cols-2">
+              <div data-aos="fade-right" class="flex pt-6 pb-6 pr-12 bg-[#F7F7F7] rounded-xl">
+                <div
+                  class="flex-shrink-0 w-[96px] -mt-4 flex-start">
+                  <img class="object-cover" src="tailwind-images/reduced-costs.svg"
+                    alt="Our software QA solutions reduce costs">
+                </div>
+                <div class="flex flex-col gap-2 w-auto">
+                  <dt
+                    class="text-base font-semibold leading-7 text-gray-900">
+                    Reduced Costs
+                  </dt>
+                  <dd class="text-justify leading-7 text-gray-600">
+                    We identify issues early before they develop into time and
+                    money-consuming problems.
+                    We reduce costs on product recalls and updates and save your
+                    company's reputation.
+                  </dd>
+                </div>
+              </div>
+              <div data-aos="fade-left" class="flex pt-6 pb-6 pr-12 bg-[#F7F7F7] rounded-xl">
+                <div
+                  class="flex-shrink-0 w-[96px] -mt-4 flex-start">
+                  <img class="object-cover" src="tailwind-images/improved-product-quality.svg"
+                    alt="Our software QA solutions reduce costs">
+                </div>
+                <div class="flex flex-col gap-2 w-auto">
+                  <dt
+                    class="text-base font-semibold leading-7 text-gray-900">
+                    Improved Product Quality
+                  </dt>
+                  <dd class="text-justify leading-7 text-gray-600">
+                  Our software QA testers ensure your software meets high-quality
+                  standards.
+                  We conduct tests and suggest improvements to eliminate bugs
+                  and optimize functionality and performance.
+                  </dd>
+                </div>
+              </div>
+              
+              <div data-aos="fade-right" class="flex pt-6 pb-6 pr-12 bg-[#F7F7F7] rounded-xl">
+                <div
+                  class="flex-shrink-0 w-[96px] -mt-4 flex-start">
+                  <img class="object-cover" src="tailwind-images/user-satisfaction.svg"
+                    alt="Our software QA solutions reduce costs">
+                </div>
+                <div class="flex flex-col gap-2 w-auto">
+                  <dt
+                    class="text-base font-semibold leading-7 text-gray-900">
+                    User Satisfaction
+                  </dt>
+                  <dd class="text-justify leading-7 text-gray-600">
+                  Our software QA solution ensures your products provide optimal
+                  user-friendliness and functionality.
+                  They will work as intended leading to high levels of customer
+                  satisfaction and loyalty.
+                  </dd>
+                </div>
+              </div>
+
+              <div data-aos="fade-left" class="flex pt-6 pb-6 pr-12 bg-[#F7F7F7] rounded-xl">
+                <div
+                  class="flex-shrink-0 w-[96px] -mt-4 flex-start">
+                  <img class="object-cover" src="tailwind-images/brand-reputation.svg"
+                    alt="Our software QA solutions reduce costs">
+                </div>
+                <div class="flex flex-col gap-2 w-auto">
+                  <dt
+                    class="text-base font-semibold leading-7 text-gray-900">
+                    Credibility and Brand Reputation
+                  </dt>
+                  <dd class="text-justify leading-7 text-gray-600">
+                    Buggy,
+                    low-quality software can damage your reputation.
+                    Our software QA solution ensures your software is running
+                    bug-free so you can become a leader in your industry.
+                  </dd>
+                </div>
+              </div>
+
+              <div data-aos="fade-right" class="flex pt-6 pb-6 pr-12 bg-[#F7F7F7] rounded-xl">
+                <div
+                  class="flex-shrink-0 w-[96px] -mt-4 flex-start">
+                  <img class="object-cover" src="tailwind-images/improved-time-market.svg"
+                    alt="Our software QA solutions reduce costs">
+                </div>
+                <div class="flex flex-col gap-2 w-auto">
+                  <dt
+                    class="text-base font-semibold leading-7 text-gray-900">
+                    Improved Time to Market
+                  </dt>
+                  <dd class="text-justify leading-7 text-gray-600">
+                    Our streamlined software development process reduces time to market.
+                    We identify and fix issues in the development stage to prevent
+                    delays and ensure a timely product launch.
+                  </dd>
+                </div>
+              </div>
+
+              <div data-aos="fade-left" class="flex pt-6 pb-6 pr-12 bg-[#F7F7F7] rounded-xl">
+                <div
+                  class="flex-shrink-0 w-[96px] -mt-4 flex-start">
+                  <img class="object-cover" src="tailwind-images/QA-performance.svg"
+                    alt="Our software QA solutions reduce costs">
+                </div>
+                <div class="flex flex-col gap-2 w-auto">
+                  <dt
+                    class="text-base font-semibold leading-7 text-gray-900">
+                    Performance
+                  </dt>
+                  <dd class="text-justify leading-7 text-gray-600">
+                  Our
+                  comprehensive reports include detailed metrics including
+                  response times, throughput, and resource utilization.
+                  We recognize areas of improvement and make software quality
+                  assurance recommendations.
+                  </dd>
+                </div>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <!-- STATS -->
+
+      <div
+        class="bg-[#EC7539]  xl:w-[100%] lg:w-[100%] md:w-[100%] w-auto lg:h-[350px] py-20 sm:py-32 mt-28">
+        <div class="px-6 lg:px-8">
+          <p
+            class="text-4xl text-white text-center lg:-mt-20 -mt-8 mb-10 font-bold tracking-tight sm:text-2xl">Key
+            metrics
+            that define our success</p>
+          <dl
+            class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+              <img class="h-[75px] w-[75px] mx-auto"
+                src="tailwind-images/QA-team-size.svg"
+                alt="Number of our software QA testers">
+              <dt class="text-base leading-7 text-white font-bold">Team
+                Size</dt>
+              <dd
+                class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl"
+                data-target="40">0</dd>
+            </div>
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+              <img class="h-[75px] w-[75px] mx-auto"
+                src="tailwind-images/QA-years-experience.svg"
+                alt="Years of experience of our software QA testers">
+              <dt class="text-base leading-7 text-white font-bold">Years of
+                experience</dt>
+              <dd
+                class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl"
+                data-target="15">0</dd>
+            </div>
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+              <img class="h-[75px] w-[75px] mx-auto"
+                src="tailwind-images/QA-successful-projects.svg"
+                alt="Number of successful QA projects">
+              <dt class="text-base leading-7 text-white font-bold">Successful
+                projects</dt>
+              <dd
+                class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl"
+                data-target="100">0</dd>
+            </div>
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+              <img class="h-[75px] w-[75px] mx-auto"
+                src="tailwind-images/QA-positive-feedbacks.svg"
+                alt="Number of positive feedbacks">
+              <dt class="text-base leading-7 text-white font-bold">Positive
+                Feedbacks</dt>
+              <dd
+                class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl"
+                data-target="150">0</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      <!-- PRICING -->
+      <div class="mx-6 w-auto  px-6 lg:px-8">
+        <section id="better_health_section"
+          class="pt-10 lg:pt-12 pb-sm-10 lg:pb-12">
+          <div class=" container mx-auto">
+            <div class>
               <div
-                class="bg-transparent bg-opacity-0 absolute left-0 top-0 flex h-24 w-24 items-center justify-center rounded-lg">
-                <img class="lg:mt-0" src="tailwind-images/improved-product-quality.svg" alt="Our software QA solutions improve product quality">
-              </div>
-              Improved Product Quality
-            </dt>
-            <dd class="mt-2 text-justify leading-7 text-gray-600">Our software QA testers ensure your software meets high-quality standards. 
-              We conduct tests and suggest improvements to eliminate bugs and optimize functionality and performance.</dd>
-          </div>
-          <div data-aos="fade-right" class="relative pl-24">
-            <dt class="text-base font-semibold leading-7 text-gray-900">
-              <div class="absolute left-0 top-0 flex h-24 w-24 items-center justify-center rounded-lg">
-                <img class="lg:mt-0" src="tailwind-images/user-satisfaction.svg" alt="Our software QA solutions ensure user satisfaction">
-              </div>
-              User Satisfaction
-            </dt>
-            <dd class="mt-2 text-justify leading-7 text-gray-600">Our software QA solution ensures your products provide optimal user-friendliness and functionality. 
-              They will work as intended leading to high levels of customer satisfaction and loyalty.</dd>
-          </div>
-          <div data-aos="fade-left" class="relative pl-24">
-            <dt class="text-base font-semibold leading-7 text-gray-900">
-              <div class="absolute left-0 top-0 flex h-24 w-24 items-center justify-center rounded-lg">
-                <img class="lg:mt-0" src="tailwind-images/brand-reputation.svg" alt="Our software QA solutions ensure credibility">
-              </div>
-              Credibility and Brand Reputation
-            </dt>
-            <dd class="mt-2 text-justify leading-7 text-gray-600">Buggy, low-quality software can damage your reputation. 
-              Our software QA solution ensures your software is running bug-free so you can become a leader in your industry.</dd>
-          </div>
-          <div data-aos="fade-right" class="relative pl-24">
-            <dt class="text-base font-semibold leading-7 text-gray-900">
-              <div class="absolute left-0 top-0 flex h-24 w-24 items-center justify-center rounded-lg ">
-                <img class="lg:mt-0" class="bg-transparent bg-opacity-0" src="tailwind-images/improved-time-market.svg"
-                  alt="Our software QA solutions reduce time to market">
-              </div>
-              Improved Time to Market
-            </dt>
-            <dd class="mt-2 text-justify leading-7 text-gray-600">Our streamlined software development process reduces time to market. 
-              We identify and fix issues in the development stage to prevent delays and ensure a timely product launch.</dd>
-          </div>
-          <div data-aos="fade-left" class="relative pl-24 mb-24">
-            <dt class="text-base font-semibold leading-7 text-gray-900">
-              <div class="absolute left-0 top-0 flex h-24 w-24 items-center justify-center rounded-lg ">
-                <img class="lg:mt-0" src="tailwind-images/QA-performance.svg" alt="Our software QA solutions include detailed reports">
-              </div>
-              Performance
-            </dt>
-            <dd class="mt-2 text-justify leading-7 text-gray-600">Our comprehensive reports include detailed metrics including response times, throughput, and resource utilization. 
-              We recognize areas of improvement and make software quality assurance recommendations. </dd>
-          </div>
-
-        </dl>
-      </div>
-    </div>
-  </div>
-
-  <!-- STATS -->
-
-  <div class="bg-[#EC7539]  xl:w-[100%] lg:w-[100%] md:w-[100%] w-auto lg:h-[350px] py-20 sm:py-32">
-    <div class="px-6 lg:px-8">
-      <p class="text-4xl text-white text-center lg:-mt-20 -mt-8 mb-10 font-bold tracking-tight sm:text-2xl">Key metrics
-        that define our success</p>
-      <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
-        <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-          <img class="h-[75px] w-[75px] mx-auto" src="tailwind-images/QA-team-size.svg" alt="Number of our software QA testers">
-          <dt class="text-base leading-7 text-white font-bold">Team Size</dt>
-          <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl" data-target="40">0</dd>
-        </div>
-        <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-          <img class="h-[75px] w-[75px] mx-auto" src="tailwind-images/QA-years-experience.svg" alt="Years of experience of our software QA testers">
-          <dt class="text-base leading-7 text-white font-bold">Years of experience</dt>
-          <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl" data-target="15">0</dd>
-        </div>
-        <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-          <img class="h-[75px] w-[75px] mx-auto" src="tailwind-images/QA-successful-projects.svg" alt="Number of successful QA projects">
-          <dt class="text-base leading-7 text-white font-bold">Successful projects</dt>
-          <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl" data-target="100">0</dd>
-        </div>
-        <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-          <img class="h-[75px] w-[75px] mx-auto" src="tailwind-images/QA-positive-feedbacks.svg" alt="Number of positive feedbacks">
-          <dt class="text-base leading-7 text-white font-bold">Positive Feedbacks</dt>
-          <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl" data-target="150">0</dd>
-        </div>
-      </dl>
-    </div>
-  </div>
-  <!-- PRICING -->
-  <div class="mx-6 xl:w-[95%] lg:w-[90%] md:w-[90%] w-auto  px-6 lg:px-8">
-    <section id="better_health_section" class="pt-10 lg:pt-12 pb-sm-10 lg:pb-12">
-      <div class=" container mx-auto">
-        <div class="">
-          <div class="flex items-center flex-col lg:flex-row lg:gap-x-16 gap-y-8 sm:gap-y-12">
-            <div class="flex flex-col justify-center  lg:gap-8 sm:gap-6 gap-4 w-full lg:w-[75%]">
-              <div data-aos="fade-up-right" class="mx-auto max-w-4xl sm:text-center">
-                <h2 class="text-left text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Simple, Transparent
-                  Pricing for Comprehensive Software QA Solutions</h2>
-                <p class="text-justify mt-6 text-lg leading-8 text-gray-600">Our all-in-one service plan will cover all your software QA needs for a fixed monthly rate. 
-                  Our straightforward terms and single-package plans offer optimal transparency and a low-maintenance solution. 
-                  Our testing processes will scale with your project. We offer innovative, growth-focused solutions for companies of all sizes.</p>
-              </div>
-            </div>
-            <div class="w-[100%] lg:max-w-md">
-              <img data-aos="fade-up-left" src="./tailwind-images/comprehensive-software-QA-solutions.svg" class="w-full lg:rounded-[32px] 
+                class="flex items-center flex-col lg:flex-row lg:gap-x-16 gap-y-8 sm:gap-y-12">
+                <div
+                  class="flex flex-col justify-center  lg:gap-8 sm:gap-6 gap-4 w-full lg:w-[75%]">
+                  <div data-aos="fade-up-right"
+                    class="mx-auto max-w-4xl sm:text-center">
+                    <h2
+                      class="text-left text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Simple,
+                      Transparent
+                      Pricing for Comprehensive Software QA Solutions</h2>
+                    <p
+                      class="text-justify mt-6 text-lg leading-8 text-gray-600">Our
+                      all-in-one service plan will cover all your software QA
+                      needs for a fixed monthly rate.
+                      Our straightforward terms and single-package plans offer
+                      optimal transparency and a low-maintenance solution.
+                      Our testing processes will scale with your project. We
+                      offer innovative, growth-focused solutions for companies
+                      of all sizes.</p>
+                  </div>
+                </div>
+                <div class="w-[100%] lg:max-w-md">
+                  <img data-aos="fade-up-left"
+                    src="./tailwind-images/comprehensive-software-QA-solutions.svg"
+                    class="w-full lg:rounded-[32px] 
                     sm:rounded-[20] rounded-xl opacity-70">
+                </div>
+
+              </div>
             </div>
-
+          </div>
+        </section>
+      </div>
+      <!-- TRUSTED BY -->
+      <div
+        class="bg-[#EC7539]  xl:w-[100%] lg:w-[100%] md:w-[100%] w-auto lg:mt-2 mt-10 ">
+        <div class="py-24 sm:py-32">
+          <div class>
+            <h2
+              class="text-4xl text-white text-center lg:-mt-20 -mt-8 mb-10 font-bold tracking-tight sm:text-2xl">Trusted
+              by the world’s most innovative
+              teams</h2>
+            <div class="overflow-hidden relative mt-8">
+              <div
+                class="flex w-full space-x-8 lg:space-x-20 animate-marquee mt-10 sm:mb-4">
+                <img class="filter invert max-h-12 w-auto object-contain"
+                  src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
+                  alt="Transistor" width="158"
+                  height="48">
+                <img class="filter invert max-h-12 w-auto object-contain"
+                  src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
+                  alt="Reform" width="158"
+                  height="48">
+                <img class="filter invert max-h-12 w-auto object-contain"
+                  src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
+                  alt="Tuple" width="158" height="48">
+                <img class="filter invert max-h-12 w-auto object-contain"
+                  src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
+                  alt="SavvyCal" width="158"
+                  height="48">
+                <img class="filter invert max-h-12 w-auto object-contain"
+                  src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
+                  alt="Statamic" width="158"
+                  height="48">
+                <!-- Duplicate the logos for seamless animation -->
+                <img class="filter invert max-h-12 w-auto object-contain"
+                  src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
+                  alt="Transistor" width="158"
+                  height="48">
+                <img class="filter invert max-h-12 w-auto object-contain"
+                  src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
+                  alt="Reform" width="158"
+                  height="48">
+                <img class="filter invert max-h-12 w-auto object-contain"
+                  src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
+                  alt="Tuple" width="158" height="48">
+                <img class="filter invert max-h-12 w-auto object-contain"
+                  src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
+                  alt="SavvyCal" width="158"
+                  height="48">
+                <img class="filter invert max-h-12 w-auto object-contain"
+                  src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
+                  alt="Statamic" width="158"
+                  height="48">
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
-    </section>
-  </div>
-  <!-- TRUSTED BY -->
-  <div class="bg-[#EC7539]  xl:w-[100%] lg:w-[100%] md:w-[100%] w-auto lg:mt-2 mt-10 ">
-    <div class="py-24 sm:py-32">
-      <div class="">
-        <h2 class="text-4xl text-white text-center lg:-mt-20 -mt-8 mb-10 font-bold tracking-tight sm:text-2xl">Trusted by the world’s most innovative
-          teams</h2>
-        <div class="overflow-hidden relative mt-8">
-          <div class="flex w-full space-x-8 lg:space-x-20 animate-marquee mt-10 sm:mb-4">
-            <img class="h-[75px] w-[75px] mx-auto" src="tailwind-images/QA-team-size.svg" alt="">
-            <img class="h-[75px] w-[75px] mx-auto" src="tailwind-images/QA-team-size.svg" alt="">
-            <img class="h-[75px] w-[75px] mx-auto" src="tailwind-images/QA-team-size.svg" alt="">
-            <img class="h-[75px] w-[75px] mx-auto" src="tailwind-images/QA-team-size.svg" alt="">
-            <img class="h-[75px] w-[75px] mx-auto" src="tailwind-images/QA-team-size.svg" alt="">
-            <img class="h-[75px] w-[75px] mx-auto" src="tailwind-images/QA-team-size.svg" alt="">
-            <img class="h-[75px] w-[75px] mx-auto" src="tailwind-images/QA-team-size.svg" alt="">
-            <img class="h-[75px] w-[75px] mx-auto" src="tailwind-images/QA-team-size.svg" alt="">
+      <!-- Pricing -->
+      <div id="Pricing" data-aos="fade-down"
+        class="mx-8 w-auto mt-16 rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:flex ">
+        <div class="p-16 sm:p-10 lg:flex-auto">
+          <h3 class="text-2xl font-bold tracking-tight text-gray-900">Ideal for
+            MVPs and Startups</h3>
+          <p class="mt-6 text-base leading-7 text-gray-600">Our updates will
+            integrate seamlessly with your systems without disruptions.
+            They will scale with iterations and enhancements to ensure a smooth
+            user experience.
+            We will help you maintain a high level of integrity in your software
+            applications.</p>
+          <div class="mt-10 flex items-center gap-x-4">
+            <h4 class="flex-none text-sm font-semibold leading-6">What’s
+              Included</h4>
+            <div class="h-px flex-auto bg-gray-100"></div>
+          </div>
+          <ul role="list"
+            class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none" viewBox="0 0 20 20"
+                fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd" />
+              </svg>
+              Clients meetings with QA leads to ensure they understand your
+              product and are aware of areas of concern
+            </li>
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none" viewBox="0 0 20 20"
+                fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd" />
+              </svg>
+              Test case documentation and support documentation to keep software
+              QA testers on the same page
+            </li>
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none" viewBox="0 0 20 20"
+                fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd" />
+              </svg>
+              Implementation of software QA following the best market practices
+            </li>
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none" viewBox="0 0 20 20"
+                fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd" />
+              </svg>
+              Detailed test execution reports clients can use for fixes and
+              improvements
+            </li>
+          </ul>
+          <div class="py-10">
+            <h3 class="text-2xl font-bold tracking-tight text-gray-900">Bigger
+              project with complex features?</h3>
+            <p class="mt-6 text-base leading-7 text-gray-600">Don't worry we can
+              adjust our standard offer just for you!
+            </p>
           </div>
         </div>
-      </div>
-    </div>
-
-  </div>
-  <!-- Pricing -->
-  <div id="Pricing" class="mx-6 xl:w-[98%] lg:w-[100%] md:w-[93%] w-auto mt-16  rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:flex ">
-    <div class="p-8 sm:p-10 lg:flex-auto">
-      <h3 class="text-2xl font-bold tracking-tight text-gray-900">Ideal for MVPs and Startups</h3>
-      <p class="mt-6 text-base leading-7 text-gray-600">Our updates will integrate seamlessly with your systems without disruptions. 
-        They will scale with iterations and enhancements to ensure a smooth user experience. 
-        We will help you maintain a high level of integrity in your software applications.</p>
-      <div class="mt-10 flex items-center gap-x-4">
-        <h4 class="flex-none text-sm font-semibold leading-6">What’s Included</h4>
-        <div class="h-px flex-auto bg-gray-100"></div>
-      </div>
-      <ul role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
-        <li class="flex gap-x-3">
-          <svg class="h-6 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd"
-              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-              clip-rule="evenodd" />
-          </svg>
-          Clients meetings with QA leads to ensure they understand your product and are aware of areas of concern
-        </li>
-        <li class="flex gap-x-3">
-          <svg class="h-6 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd"
-              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-              clip-rule="evenodd" />
-          </svg>
-          Test case documentation and support documentation to keep software QA testers on the same page
-        </li>
-        <li class="flex gap-x-3">
-          <svg class="h-6 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd"
-              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-              clip-rule="evenodd" />
-          </svg>
-          Implementation of software QA following the best market practices
-        </li>
-        <li class="flex gap-x-3">
-          <svg class="h-6 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd"
-              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-              clip-rule="evenodd" />
-          </svg>
-          Detailed test execution reports clients can use for fixes and improvements
-        </li>
-      </ul>
-      <div class="py-10">
-        <h3 class="text-2xl font-bold tracking-tight text-gray-900">Bigger project with complex features?</h3>
-        <p class="mt-6 text-base leading-7 text-gray-600">Don't worry we can adjust our standard offer just for you!
-        </p>
-      </div>
-    </div>
-    <div class="mt-20  p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-      <div class="lg:mt-20 -mt-20 rounded-2xl py-10 text-center border-2 border-orange-200 lg:flex lg:flex-col
-           lg:justify-center lg:py-32 bg-orange-50">
-        <div class="mx-auto max-w-xs px-8">
-          <p class="text-base font-semibold text-gray-600">Per Month</p>
-          <p class="mt-6 flex items-baseline justify-center gap-x-2">
-            <span class="text-5xl font-bold tracking-tight text-gray-900">$1499</span>
-            <span class="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD</span>
-          </p>
-          <a href="#contact" class="mt-10 block w-full rounded-md bg-[#f1580c] px-3 py-2 text-center text-sm font-semibold 
+        <div class="p-8 lg:w-full lg:max-w-md lg:flex-shrink-0">
+          <div
+            class="rounded-2xl py-10 text-center shadow-lg shadow-[#FFF6F2] border border-[#EEAB86] lg:flex lg:flex-col
+           lg:justify-center lg:py-32 bg-[#FFF6F2]">
+            <div class="mx-auto max-w-xs px-8">
+              <p class="text-base font-semibold text-gray-600">Per Month</p>
+              <p class="mt-6 flex items-baseline justify-center gap-x-2">
+                <span
+                  class="text-5xl font-bold tracking-tight text-gray-900">$1499</span>
+                <span
+                  class="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD</span>
+              </p>
+              <a href="#contact"
+                class="mt-10 block w-full rounded-md bg-[#f1580c] px-3 py-2 text-center text-sm font-semibold 
               text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
                focus-visible:outline-indigo-600">Contact Us</a>
-          <p class="mt-6 text-xs leading-5 text-gray-600">Cancel at anytime</p>
+              <p class="mt-6 text-xs leading-5 text-gray-600">Cancel at
+                anytime</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  
-  <!-- FEATURES -->
-  <p class="mt-20 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">The Expertise of Our Software QA Testers</p>
-  <!-- </div> -->
-  <div class="mx-6 xl:w-[95%] lg:w-[90%] md:w-[90%] w-auto overflow-hidden mt-16 sm:mt-16 lg:mt-16">
-    <dl class="grid grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-      <div data-aos="fade-right" class="relative pl-24">
-        <dt class="text-justify font-semibold leading-7 text-gray-900">
-          <div class="absolute left-0 top-0 flex h-24 w-24 items-center justify-center rounded-lg ">
-            <img src="tailwind-images/QA-functional.svg" alt="Our software QA testers ensure your software is functional">
-          </div>
-          Functional
-        </dt>
-        <dd class="mt-2 text-justify leading-7 text-gray-600">We execute test cases to verify that your software is functional. 
-          Our software QA testers identify bugs and capture screenshots to provide detailed bug reports and effective solutions.</dd>
-      </div>
-      <div data-aos="fade-left" class="relative pl-24">
-        <dt class="text-base font-semibold leading-7 text-gray-900">
-          <div class="absolute left-0 top-0 flex h-24 w-24 items-center justify-center rounded-lg ">
-            <img src="tailwind-images/QA-security.svg" alt="Our software QA testers ensure your software is secure">
-          </div>
-          Security
-        </dt>
-        <dd class="mt-2 text-justify leading-7 text-gray-600">Security is a major issue in today’s increasingly digital landscape. 
-          We use Input Validation and Error Handling Testing to identify vulnerabilities and keep sensitive data protected. 
-          Our Session Management, Access Control, and Encryption Testing enforces access control and protects data during storage and transmission.</dd>
-      </div>
-      <div data-aos="fade-right" class="relative pl-24">
-        <dt class="text-justify font-semibold leading-7 text-gray-900">
-          <div class="absolute left-0 top-0 flex h-24 w-24 items-center justify-center rounded-lg ">
-            <img src="tailwind-images/QA-usability.svg" alt="Our software QA testers perform comprehensive usability testing">
 
+      <!-- FEATURES -->
+      <p
+        class="mt-20 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">The
+        Expertise of Our Software QA Testers</p>
+      <!-- </div> -->
+      <div
+        class="mx-6 w-auto overflow-hidden mt-16 sm:mt-16 lg:mt-16">
+        <dl
+          class="grid grid-cols-1 gap-x-6 gap-y-6 md:grid-cols-2">
+          <div data-aos="fade-right" class="flex pt-6 pb-6 pr-12 bg-[#F7F7F7] rounded-xl">
+            <div
+              class="flex-shrink-0 w-[96px] -mt-4 flex-start">
+              <img class="object-cover" src="tailwind-images/QA-functional.svg"
+                alt="Our software QA solutions reduce costs">
+            </div>
+            <div class="flex flex-col gap-2 w-auto">
+              <dt
+                class="text-base font-semibold leading-7 text-gray-900">
+                Functional
+              </dt>
+              <dd class="text-justify leading-7 text-gray-600">
+              We execute
+              test cases to verify that your software is functional.
+              Our software QA testers identify bugs and capture screenshots to
+              provide detailed bug reports and effective solutions.
+              </dd>
+            </div>
           </div>
-          Usability
-        </dt>
-        <dd class="mt-2 text-justify leading-7 text-gray-600">Our comprehensive usability testing involves collecting valuable feedback and observing user interactions. 
-          We identify and address pain points, bottlenecks, and areas of improvement to ensure optimal functionality.</dd>
-      </div>
-      <div data-aos="fade-left" class="mb-20 relative pl-24">
-        <dt class="text-base font-semibold leading-7 text-gray-900">
-          <div class="absolute left-0 top-0 flex h-24 w-24 items-center justify-center rounded-lg ">
-            <img src="tailwind-images/QA-automation.svg" alt="Our software QA testers use automation to increase efficiency">
+          
+          <div data-aos="fade-left" class="flex pt-6 pb-6 pr-12 bg-[#F7F7F7] rounded-xl">
+            <div
+              class="flex-shrink-0 w-[96px] -mt-4 flex-start">
+              <img class="object-cover" src="tailwind-images/QA-security.svg"
+                alt="Our software QA solutions reduce costs">
+            </div>
+            <div class="flex flex-col gap-2 w-auto">
+              <dt
+                class="text-base font-semibold leading-7 text-gray-900">
+                Security
+              </dt>
+              <dd class="text-justify leading-7 text-gray-600">
+                Security is a
+                major issue in today’s increasingly digital landscape.
+                We use Input Validation and Error Handling Testing to identify
+                vulnerabilities and keep sensitive data protected.
+                Our Session Management, Access Control, and Encryption Testing
+                enforces access control and protects data during storage and
+                transmission.
+              </dd>
+            </div>
           </div>
-          Automation
-        </dt>
-        <dd class="mt-2 text-justify leading-7 text-gray-600 mb-16">Our QA software automation streamlines the testing process to increase accuracy and efficiency. 
-          We can quickly address defects to ensure your system is running smoothly.</dd>
+
+          <div data-aos="fade-right" class="flex pt-6 pb-6 pr-12 bg-[#F7F7F7] rounded-xl">
+            <div
+              class="flex-shrink-0 w-[96px] -mt-4 flex-start">
+              <img class="object-cover" src="tailwind-images/QA-usability.svg"
+                alt="Our software QA solutions reduce costs">
+            </div>
+            <div class="flex flex-col gap-2 w-auto">
+              <dt
+                class="text-base font-semibold leading-7 text-gray-900">
+                Usability
+              </dt>
+              <dd class="text-justify leading-7 text-gray-600">
+              Our comprehensive usability testing involves collecting valuable
+              feedback and observing user interactions.
+              We identify and address pain points, bottlenecks, and areas of
+              improvement to ensure optimal functionality.
+              </dd>
+            </div>
+          </div>
+
+          <div data-aos="fade-left" class="flex pt-8 pb-6 pr-12 bg-[#F7F7F7] rounded-xl">
+            <div
+              class="flex-shrink-0 w-[96px] -mt-4 flex-start">
+              <img class="object-cover" src="tailwind-images/QA-automation.svg"
+                alt="Our software QA solutions reduce costs">
+            </div>
+            <div class="flex flex-col gap-2 w-auto">
+              <dt
+                class="text-base font-semibold leading-7 text-gray-900">
+                Automation
+              </dt>
+              <dd class="text-justify leading-7 text-gray-600">
+              Our QA
+              software automation streamlines the testing process to increase
+              accuracy and efficiency.
+              We can quickly address defects to ensure your system is running
+              smoothly.
+              </dd>
+            </div>
+          </div>
+        </dl>
       </div>
-    </dl>
-  </div>
-  <!-- contact section -->
-  <section data-aos="fade-up" data-aos-duration="3000" class="bg-[#EC7539]  lg:w-[100%] xl:w-[100%] md:w-[100%] w-auto " id="contact">
-    <div class="lg:mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-      <div class="">
-        <div class="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-          <h2 class="font-heading mb-4 font-bold tracking-tight text-white text-3xl sm:text-5xl">
-            Contact Us
-          </h2>
-          <p class="mx-auto mt-4 max-w-3xl text-xl text-white">Send us a message or schedule a call to discover the benefits of our software quality assurance service
-          </p>
-        </div>
-      </div>
-      <div class="flex items-stretch justify-center">
-        <!-- <div class="grid md:grid-cols-2 w-screen gap-5 rounded-md "> -->
-          <!-- <div class="h-full"> -->
+      <!-- contact section -->
+      <section data-aos="fade-up" data-aos-duration="3000"
+        class="bg-[#EC7539]  lg:w-[100%] xl:w-[100%] md:w-[100%] w-auto "
+        id="contact">
+        <div class="lg:mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-20 mt-28">
+          <div class>
+            <div
+              class="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
+              <h2
+                class="font-heading mb-4 font-bold tracking-tight text-white text-3xl sm:text-5xl">
+                Contact Us
+              </h2>
+              <p class="mx-auto mt-4 max-w-3xl text-xl text-white">Send us a
+                message or schedule a call to discover the benefits of our
+                software quality assurance service
+              </p>
+            </div>
+          </div>
+          <div class="flex items-stretch justify-center">
+            <!-- <div class="grid md:grid-cols-2 w-screen gap-5 rounded-md "> -->
+            <!-- <div class="h-full"> -->
             <!-- <ul class="mb-6 ml-[30px] mt-6 gap-y-5 md:mb-0">
               <li class="flex">
                 <div class="flex h-10 w-10 mt-10 items-center justify-center rounded text-gray-50">
                   <img class="mt-8" src="./tailwind-images/address.png">
                 </div> -->
-                <!-- <div class="ml-4 mb-4">
+            <!-- <div class="ml-4 mb-4">
                    <h3 class="mb-2 mt-16 text-lg font-medium leading-6 text-white">Our Address
                   </h3> 
                   <p class="text-white">1230 Maecenas Street Donec Road</p>
@@ -421,44 +649,54 @@
               </li>
             </ul>
           </div> -->
-          <div class="card h-fit lg:w-1/2 w-full mx-2 px-5" id="form">
-            <!-- <h2 class="mb-4 text-2xl font-bold text-white">Ready to Get Started?</h2> -->
-            <form class="" id="contactForm"action="https://formspree.io/f/xyzgybwd" method="POST" >
-              <div class="mb-2">
-                <div class="mx-0 mb-1 sm:mb-4">
+            <div class="card h-fit lg:w-1/2 w-full mx-2 px-5" id="form">
+              <!-- <h2 class="mb-4 text-2xl font-bold text-white">Ready to Get Started?</h2> -->
+              <form class id="contactForm"
+                action="https://formspree.io/f/xyzgybwd" method="POST">
+                <div class="mb-2">
                   <div class="mx-0 mb-1 sm:mb-4">
-                    <label for="name" class="pb-1 text-xs uppercase tracking-wider"></label><input type="text" id="name"
-                      autocomplete="given-name" placeholder="Your name"
-                      class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
-                      name="name">
+                    <div class="mx-0 mb-1 sm:mb-4">
+                      <label for="name"
+                        class="pb-1 text-xs uppercase tracking-wider"></label><input
+                        type="text" id="name"
+                        autocomplete="given-name" placeholder="Your name"
+                        class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                        name="name">
+                    </div>
+                    <div class="mx-0 mb-1 sm:mb-4">
+                      <label for="email"
+                        class="pb-1 text-xs uppercase tracking-wider"></label><input
+                        type="email"
+                        id="email" autocomplete="email"
+                        placeholder="Your email address"
+                        class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                        name="email">
+                    </div>
                   </div>
                   <div class="mx-0 mb-1 sm:mb-4">
-                    <label for="email" class="pb-1 text-xs uppercase tracking-wider"></label><input type="email"
-                      id="email" autocomplete="email" placeholder="Your email address"
-                      class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
-                      name="email">
+                    <label for="textarea"
+                      class="pb-1 text-xs uppercase tracking-wider"></label><textarea
+                      id="textarea"
+                      name="message" cols="30" rows="5"
+                      placeholder="Write your message..."
+                      class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"></textarea>
                   </div>
                 </div>
-                <div class="mx-0 mb-1 sm:mb-4">
-                  <label for="textarea" class="pb-1 text-xs uppercase tracking-wider"></label><textarea id="textarea"
-                    name="message" cols="30" rows="5" placeholder="Write your message..."
-                    class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"></textarea>
+                <div class="text-center">
+                  <button type="submit"
+                    class="w-full bg-[#fffeec]  text-black hover:bg-[#f1580c] hover:text-white px-6 py-3 font-xl rounded-md sm:mb-0">Send
+                    Message</button>
                 </div>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="w-full bg-[#fffeec]  text-black hover:bg-[#f1580c] hover:text-white px-6 py-3 font-xl rounded-md sm:mb-0">Send
-                  Message</button>
-              </div>
-            </form>
+              </form>
+            </div>
+            <!-- </div> -->
+            <!-- </div> -->
           </div>
-        <!-- </div> -->
-      <!-- </div> -->
-    </div>
-  </section>
-  <!-- footer -->
-  <footer class="lg:w-[100%] xl:w-[100%] md:w-[100%] w-auto">
-    <div class="mx-2 overflow-x-hidden px-6  lg:px-8">
-      <!-- <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
+        </section>
+        <!-- footer -->
+        <footer class="lg:w-[100%] xl:w-[100%] md:w-[100%] w-auto">
+          <div class="mx-2 overflow-x-hidden px-6  lg:px-8">
+            <!-- <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
         <div class="pb-6">
           <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Home</a>
         </div>
@@ -475,7 +713,7 @@
           <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Contact</a>
         </div>
       </nav> -->
-      <!-- <div class="mt-4 flex justify-center space-x-10">
+            <!-- <div class="mt-4 flex justify-center space-x-10">
         <a href="#" class="text-gray-500 hover:text-gray-900">
           <span class="sr-only">Facebook</span>
           <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -509,18 +747,20 @@
           </svg>
         </a>
       </div> -->
-      <!-- <hr class="mb-4 mx-2  mt-4 border-gray-300" /> -->
-      <p class="bottom-0 mb-0 py-2 text-center text-xs leading-5 text-gray-500">© 2024 Effective QA. All rights reserved.</p>
-    </div>
-  </footer>
-</div>
-  <script>
+            <!-- <hr class="mb-4 mx-2  mt-4 border-gray-300" /> -->
+            <p
+              class="bottom-0 mb-0 py-2 text-center text-xs leading-5 text-gray-500">©
+              2024 Effective QA. All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
+      <script>
     document.getElementById('mobile-menu-button').addEventListener('click', function () {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
 
   </script>
-  <script>
+      <script>
     document.addEventListener('DOMContentLoaded', function () {
       const counters = document.querySelectorAll('[data-target]');
       const speed = 200; // Adjust the speed as necessary
@@ -578,9 +818,9 @@
 
 
   </script>
-  <script>
+      <script>
     AOS.init();
   </script>
-</body>
+    </body>
 
-</html>
+  </html>

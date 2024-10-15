@@ -410,8 +410,12 @@ video {
   right: 0.25rem;
 } .right-3{
   right: 0.75rem;
+} .right-40{
+  right: 10rem;
 } .top-0{
   top: 0px;
+} .top-20{
+  top: 5rem;
 } .top-5{
   top: 1.25rem;
 } .z-10{
@@ -495,6 +499,8 @@ video {
   width: 6rem;
 } .w-28{
   width: 7rem;
+} .w-3\/12{
+  width: 25%;
 } .w-4\/6{
   width: 66.666667%;
 } .w-auto{
@@ -988,6 +994,8 @@ video {
     padding-bottom: 6rem;
   } .xl\:pb-32{
     padding-bottom: 8rem;
+  } .xl\:pb-56{
+    padding-bottom: 14rem;
   } .xl\:pt-16{
     padding-top: 4rem;
   } .xl\:pt-24{
